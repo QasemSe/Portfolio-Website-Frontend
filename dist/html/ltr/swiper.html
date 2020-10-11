@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Swiper</title>
+
+    <link rel="prefetch" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" crossorigin>
+
+    <link rel="stylesheet" href="../../fonts/feather/feather.css">
+
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- BEGIN: Page CSS -->
+    <link rel="stylesheet" href="../../css/pages/swiper.css">
+    <!-- END: Page CSS -->
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="height: 100vh">
+            <div class="col-lg-7">
+                <div class="header-slide">
+                    <span class="header-slide__label badge badge-secondary text-uppercase">latest projects</span>
+                    <div class="header-slide__image-slider swiper-container">
+                        <div class="header-slide__image-slider__wrapper swiper-wrapper">
+                            <div class="header-slide__image-slider__slide swiper-slide">
+                                <a href="#">
+                                    <img src="../../images/portfolio-2.jpg" alt="Hero Slider Picture" width="100%">
+                                </a>
+                            </div>
+                            <div class="header-slide__image-slider__slide swiper-slide">
+                                <a href="#">
+                                    <img src="../../images/portfolio-3.jpg" alt="Hero Slider Picture" width="100%">
+                                </a>
+                            </div>
+                            <div class="header-slide__image-slider__slide swiper-slide">
+                                <a href="#">
+                                    <img src="../../images/portfolio-4.jpg" alt="Hero Slider Picture" width="100%">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-slide__count-slider swiper-container d-none d-md-block">
+                        <div class="header-slide__count-slider__wrapper swiper-wrapper">
+                            <div class="header-slide__count-slider__slide swiper-slide">
+                                <span>01</span>
+                            </div>
+                            <div class="header-slide__count-slider__slide swiper-slide">
+                                <span>02</span>
+                            </div>
+                            <div class="header-slide__count-slider__slide swiper-slide">
+                                <span>03</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-slide__content-slider swiper-container">
+                        <div class="header-slide__content-slider__wrapper swiper-wrapper">
+                            <div class="header-slide__content-slider__slide swiper-slide">
+                                <div>
+                                    <h5>Riyadh Carnival</h5>
+                                    <p>Poster Design For Advertise</p>
+                                </div>
+                            </div>
+                            <div class="header-slide__content-slider__slide swiper-slide">
+                                <div>
+                                    <h5>Amaco Group</h5>
+                                    <p>Company Profile Design</p>
+                                </div>
+                            </div>
+                            <div class="header-slide__content-slider__slide swiper-slide">
+                                <div>
+                                    <h5>Alawda College</h5>
+                                    <p>Flyer Design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/libraries/jquery.min.js"></script>
+    <script src="../../vendors/extensions/swiper.min.js"></script>
+    <script>
+        const hero_count_slider = new Swiper('.header-slide__count-slider', {
+            direction: 'vertical',
+            simulateTouch: false,
+            loop: true
+        })
+
+        const hero_content_slider = new Swiper('.header-slide__content-slider', {
+            direction: 'vertical',
+            simulateTouch: false,
+            loop: true,
+            controller: {
+                control: hero_count_slider
+            }
+
+        })
+
+        const hero_image_slider = new Swiper('.header-slide__image-slider', {
+            resistanceRatio: false,
+            loop: true,
+            navigation: {
+                nextEl: '.next-slide-preview'
+            },
+            controller: {
+                control: hero_content_slider
+            }
+        })
+    </script>
+</body>
+
+</html>

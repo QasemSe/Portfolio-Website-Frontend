@@ -1,0 +1,26 @@
+.input-icon {
+  position: relative;
+  &__label {
+    cursor: text;
+    position: absolute;
+    top: $input-padding-y;
+    left: $input-btn-padding-x - .2rem;
+    color: $gray-700;
+    transition: .15s, background-color 0s;
+    padding: .2rem;
+    background-color: white;
+    font-size: .9rem;
+    &.stay {
+      top: 0;
+      transform: translateY(-50%);
+      font-size: .8rem;
+    }
+  }
+
+  input, textarea {
+    background: transparent;
+    &:focus + .input-icon__label {
+      color: $secondary;
+    }
+  }
+}

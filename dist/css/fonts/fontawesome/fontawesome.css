@@ -1,0 +1,61 @@
+/*!
+ * Font Awesome Free 5.14.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+/*!
+ * Font Awesome Free 5.14.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face
+{
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400;
+    font-style: normal;
+
+    font-display: block;
+    src: url('webfonts/fa-brands-400.eot');
+    src: url('webfonts/fa-brands-400.eot?#iefix') format('embedded-opentype'), url('webfonts/fa-brands-400.woff2') format('woff2'), url('webfonts/fa-brands-400.woff') format('woff'), url('webfonts/fa-brands-400.ttf') format('truetype'), url('webfonts/fa-brands-400.svg#fontawesome') format('svg');
+}
+
+.fab
+{
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400;
+}
+
+
+.fab
+{
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+
+    display: inline-block;
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: auto;
+}
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+readers do not read off random characters that represent icons */
+
+.fa-behance:before
+{
+    content: '\f1b4';
+}
+
+.fa-codepen:before
+{
+    content: '\f1cb';
+}
+
+.fa-dribbble:before
+{
+    content: '\f17d';
+}
+
+.fa-github:before
+{
+    content: '\f09b';
+}
